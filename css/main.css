@@ -1,0 +1,10 @@
+body {
+    display: grid;
+    grid-template:
+        "header" 3em
+        "presentacion" 10em
+        "planes" auto
+        "preguntas" auto
+        / 1fr;
+    font-size: 3em;
+}
