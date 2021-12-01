@@ -1,10 +1,29 @@
 body {
     display: grid;
     grid-template:
-        "header" 3em
+        "header" 4em
         "presentacion" 10em
         "planes" auto
         "preguntas" auto
         / 1fr;
     font-size: 3em;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em;
+    background: #ffffff;
+    box-shadow: 0 10px 20px 0 #00000030;
+}
+
+.logotipo, .logotipo--img {
+    height: 100%;
+}
+
+.boton-menu {
+    font-size: 2em;
+    color: #000;
 }
