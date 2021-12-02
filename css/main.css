@@ -16,7 +16,7 @@ header {
     align-items: center;
     padding: 1.2em;
     background: #ffffff;
-    box-shadow: 0 10px 20px 0 #00000030;
+    box-shadow: 0 25px 20px 0 #00000030;
     position: fixed;
     width: 100%;
     box-sizing: border-box;
@@ -33,12 +33,30 @@ header {
 
 .presentacion--titulo {
     color: white;
+    text-align: center;
+    font-size: 1.75em;
 }
 
 .presentacion {
-    background-image: url("/img/fondo1.jpg");
     grid-area: presentacion;
     background-size: cover;
+    background-position: left center;
+    background-size: 1400px;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#00000050, #00000000 55%),  url("/img/fondo1.jpg");
+}
+
+.boton {
+    background: #AA7CDE;
+    text-decoration: none;
+    padding: .85em;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 0 15px 20px 0 #00000030;
 }
 
 .planes {
