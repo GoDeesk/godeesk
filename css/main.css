@@ -2,7 +2,7 @@ body {
     display: grid;
     grid-template:
         "header" 4em
-        "presentacion" 10em
+        "presentacion" 15em
         "planes" auto
         "preguntas" auto
         / 1fr;
@@ -17,13 +17,35 @@ header {
     padding: 1.2em;
     background: #ffffff;
     box-shadow: 0 10px 20px 0 #00000030;
-}
-
-.logotipo, .logotipo--img {
-    height: 100%;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .boton-menu {
-    font-size: 2em;
+    font-size: 1.75em;
     color: #000;
 }
+
+.logotipo--img {
+    height: 1.6em;
+}
+
+.presentacion--titulo {
+    color: white;
+}
+
+.presentacion {
+    background-image: url("/img/fondo1.jpg");
+    grid-area: presentacion;
+    background-size: cover;
+}
+
+.planes {
+    grid-area: planes;
+}
+
+.preguntas {
+    grid-area: preguntas;
+}
+
