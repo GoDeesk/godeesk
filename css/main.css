@@ -8,6 +8,8 @@
     
     --color-texto-claro: #fff;
     --color-texto-oscuro: #000;
+
+    --shadow: 0 25px 20px 0 #00000030;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
     align-items: center;
     padding: 1.2em;
     background: var(--color-fondo);
-    box-shadow: 0 25px 20px 0 #00000030;
+    box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
     box-sizing: border-box;
@@ -45,6 +47,14 @@ body {
     height: 1.6em;
 }
 
+/*ver tema de fondo, en el figma el título "Planes" no está*/
+/*otra cosa, viste que en el figma están las puntas de las cartas redondeadas? bueno, creería que es mejor
+dejarlas cuadradas siguiendo la lógica de los cortes de colores, fondos y todo eso*/
+.planes {
+    text-align: center;
+    background: url(/img/pattern.png);
+}
+
 .presentacion {
     grid-area: presentacion;
     display: flex;
@@ -52,12 +62,13 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(#0005, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png");
+    box-shadow: var(--shadow); /*no sé por qué no se aplica*/
     /*background: var(--color-fondo) url("/img/fondo1-600w.png") no-repeat fixed left center;*/
     /* TODO: Hacer que el fondo sea de varias resoluciones */
 }
 
 .presentacion--titulo {
-    color: white;
+    color: #fff;
     text-align: center;
     font-size: 1.75em;
     font-weight: 01;
@@ -80,25 +91,50 @@ body {
     display: flex;
     overflow-x: scroll;
     max-width: 100vw;
+    box-shadow: var(--shadow);
 }
 
+/*después nos fijamos bien eso de que las cards sean ajustables el ancho al texto*/
 .plan {
     flex-shrink: 0;
-    --border: 1px solid var(--color-texto-oscuro);
+    --border: .5px solid var(--color-texto-oscuro);
     border: var(--border);
     border-radius: 0em;
     background: var(--color-fondo);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    margin: 1.3em;
+    align-items: center;
 }
 
 .plan--titulo {
     background: var(--color-3);
     color: var(--color-texto-claro);
+
 }
+
+.plan--caracteristicas {
+    font-size: 1.2em;
+}
+
+/*agregué la class style--caracteristicasx para probar diferentes estilos en las 3 cards*/
+.plan--caracteristicas--stylecard1 {
+    list-style-type: none;
+}
+
+.plan--caracteristicas--stylecard2 {
+    list-style-type: circle;
+}
+
+.plan--caracteristicas--stylecard3 {
+    list-style-type: style color var(--color-2);
+}
+/*la idea sería que nos quedemos con la que quede mejor*/
+
 
 .preguntas {
     grid-area: preguntas;
+    text-align: center;
 }
 
