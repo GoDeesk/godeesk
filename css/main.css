@@ -8,6 +8,7 @@
     
     --color-texto-claro: #fff;
     --color-texto-oscuro: #000;
+    --color-texto-secundario: #666;
 
     --shadow: 0 25px 20px 0 #00000030;
     --shadow-inset: inset 0 25px 20px 0 #00000030;
@@ -23,7 +24,6 @@ body {
         "planes" auto
         "preguntas" auto
         / 1fr;
-    font-size: 3em;
     font-family: 'Comfortaa', sans-serif;
     overflow-x: hidden;
 }
@@ -55,8 +55,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#0005, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png");
-    /*background: var(--color-fondo) url("/img/fondo1-600w.png") no-repeat fixed left center;*/
+    background: linear-gradient(#0005, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png"), top left/cover fixed url("https://www.kindpng.com/picc/m/9-99641_pensando-especialmente-en-las-personas-con-movilidad-persona.png");
     /* TODO: Hacer que el fondo sea de varias resoluciones */
 }
 
@@ -110,6 +109,7 @@ body {
 .plan--titulo {
     background: var(--color-3);
     color: var(--color-texto-claro);
+    text-align: center;
 }
 
 .plan--caracteristicas {
@@ -121,6 +121,8 @@ body {
 
 .plan--caracteristicas ul {
     width: 80%;
+    margin: 0;
+    padding: .5em 0;
 }
 
 .plan--caracteristicas li {
@@ -138,9 +140,30 @@ body {
     border-bottom: var(--border);
 }
 
+.precio { font-weight: 700; }
+
+.plan--precio { text-align: center; }
+
+.precio--numero { font-size: 2em; }
+
+.precio--aviso { color: var(--color-texto-secundario); }
+
 .preguntas {
     grid-area: preguntas;
     text-align: center;
     box-shadow: var(--shadow-inset);
+    background: var(--color-5);
+    color: var(--color-texto-claro);
+    padding: 0 2.5em;
+}
+
+.preguntas h3 {
+    font-size: 1.6em;
+}
+
+.preguntas h3
+
+.preguntas p {
+    font-size: 1.2em;
 }
 
