@@ -24,6 +24,7 @@ body {
         / 1fr;
     font-size: 3em;
     font-family: 'Comfortaa', sans-serif;
+    overflow-x: hidden;
 }
 
 .header {
@@ -45,14 +46,6 @@ body {
 
 .logotipo--img {
     height: 1.6em;
-}
-
-/*ver tema de fondo, en el figma el título "Planes" no está*/
-/*otra cosa, viste que en el figma están las puntas de las cartas redondeadas? bueno, creería que es mejor
-dejarlas cuadradas siguiendo la lógica de los cortes de colores, fondos y todo eso*/
-.planes {
-    text-align: center;
-    background: url(/img/pattern.png);
 }
 
 .presentacion {
@@ -83,8 +76,14 @@ dejarlas cuadradas siguiendo la lógica de los cortes de colores, fondos y todo 
     box-shadow: 0 4px 4px 0 #00000030;
 }
 
+/*ver tema de fondo, en el figma el título "Planes" no está*/
+/*otra cosa, viste que en el figma están las puntas de las cartas redondeadas? bueno, creería que es mejor
+dejarlas cuadradas siguiendo la lógica de los cortes de colores, fondos y todo eso*/
 .planes {
     grid-area: planes;
+    text-align: center;
+    background: url(/img/pattern.png);
+    background-size: cover;
 }
 
 .lista-planes {
@@ -92,6 +91,10 @@ dejarlas cuadradas siguiendo la lógica de los cortes de colores, fondos y todo 
     overflow-x: scroll;
     max-width: 100vw;
     box-shadow: var(--shadow);
+}
+
+.lista-planes::-webkit-scrollbar {
+    display: none;
 }
 
 /*después nos fijamos bien eso de que las cards sean ajustables el ancho al texto*/
