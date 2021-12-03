@@ -10,6 +10,7 @@
     --color-texto-oscuro: #000;
 
     --shadow: 0 25px 20px 0 #00000030;
+    --shadow-inset: inset 0 25px 20px 0 #00000030;
 }
 
 body {
@@ -55,7 +56,6 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(#0005, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png");
-    box-shadow: var(--shadow); /*no sé por qué no se aplica*/
     /*background: var(--color-fondo) url("/img/fondo1-600w.png") no-repeat fixed left center;*/
     /* TODO: Hacer que el fondo sea de varias resoluciones */
 }
@@ -73,27 +73,22 @@ body {
     padding: .85em;
     border-radius: 10px;
     color: var(--color-texto-claro);
+    font-weight: 700;
     box-shadow: 0 4px 4px 0 #00000030;
 }
 
-/*ver tema de fondo, en el figma el título "Planes" no está*/
-/*otra cosa, viste que en el figma están las puntas de las cartas redondeadas? bueno, creería que es mejor
-dejarlas cuadradas siguiendo la lógica de los cortes de colores, fondos y todo eso*/
 .planes {
     grid-area: planes;
-    text-align: center;
-    background: url(/img/pattern.png);
+    background: fixed url(/img/pattern.png);
     background-size: cover;
-}
-
-.lista-planes {
+    box-shadow: var(--shadow-inset);
+    padding: 2em 0;
     display: flex;
     overflow-x: scroll;
     max-width: 100vw;
-    box-shadow: var(--shadow);
 }
 
-.lista-planes::-webkit-scrollbar {
+.planes::-webkit-scrollbar {
     display: none;
 }
 
@@ -107,37 +102,45 @@ dejarlas cuadradas siguiendo la lógica de los cortes de colores, fondos y todo 
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    margin: 1.3em;
-    align-items: center;
+    margin: 0 1.3em;
+    align-items: stretch;
+    width: min(14em, 80%);
 }
 
 .plan--titulo {
     background: var(--color-3);
     color: var(--color-texto-claro);
-
 }
 
 .plan--caracteristicas {
     font-size: 1.2em;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
-/*agregué la class style--caracteristicasx para probar diferentes estilos en las 3 cards*/
-.plan--caracteristicas--stylecard1 {
-    list-style-type: none;
+.plan--caracteristicas ul {
+    width: 80%;
 }
 
-.plan--caracteristicas--stylecard2 {
-    list-style-type: circle;
+.plan--caracteristicas li {
+    list-style: none;
+    line-height: 2em;
 }
 
-.plan--caracteristicas--stylecard3 {
-    list-style-type: style color var(--color-2);
+.plan--caracteristicas .fa-check-circle {
+    font-size: .7em;
+    padding-right: .7em;
+    color: var(--color-2);
 }
-/*la idea sería que nos quedemos con la que quede mejor*/
 
+.plan--titulo, .plan--caracteristicas {
+    border-bottom: var(--border);
+}
 
 .preguntas {
     grid-area: preguntas;
     text-align: center;
+    box-shadow: var(--shadow-inset);
 }
 
