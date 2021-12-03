@@ -24,7 +24,7 @@ body {
     font-family: 'Comfortaa', sans-serif;
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +38,7 @@ header {
 
 .boton-menu {
     font-size: 1.75em;
-    color: #000;
+    color: var(--color-texto-oscuro);
 }
 
 .logotipo--img {
@@ -47,16 +47,12 @@ header {
 
 .presentacion {
     grid-area: presentacion;
-    background-size: cover;
-    background-position: left center;
-    background-size: 1400px;
-    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: fixed cover left/center no-repeat;
-    background-image: linear-gradient(#0005, #0000 55%), url("/img/fondo1-600w.png");
+    background: linear-gradient(#0005, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png");
+    /*background: var(--color-fondo) url("/img/fondo1-600w.png") no-repeat fixed left center;*/
     /* TODO: Hacer que el fondo sea de varias resoluciones */
 }
 
@@ -68,16 +64,38 @@ header {
 }
 
 .boton {
-    background: #AA7CDE;
+    background: var(--color-3);
     text-decoration: none;
     padding: .85em;
     border-radius: 10px;
     color: var(--color-texto-claro);
-    box-shadow: 0 15px 20px 0 #00000030;
+    box-shadow: 0 4px 4px 0 #00000030;
 }
 
 .planes {
     grid-area: planes;
+}
+
+.lista-planes {
+    display: flex;
+    overflow-x: scroll;
+    max-width: 100vw;
+}
+
+.plan {
+    flex-shrink: 0;
+    --border: 1px solid var(--color-texto-oscuro);
+    border: var(--border);
+    border-radius: 0em;
+    background: var(--color-fondo);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan--titulo {
+    background: var(--color-3);
+    color: var(--color-texto-claro);
 }
 
 .preguntas {
