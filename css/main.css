@@ -14,6 +14,8 @@
     --shadow-inset: inset 0 25px 20px 0 #00000030;
 }
 
+.j-sb { justify-content: space-between; }
+
 body {
     margin: 0;
     padding: 0;
@@ -32,17 +34,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2em;
+    padding: 1.5em;
+    height: 5em;
     background: var(--color-fondo);
     box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
     box-sizing: border-box;
-}
-
-.boton-menu {
-    font-size: 1.75em;
-    color: var(--color-texto-oscuro);
 }
 
 .logotipo--img {
@@ -74,11 +72,16 @@ body {
     color: var(--color-texto-claro);
     font-weight: 700;
     box-shadow: 0 4px 4px 0 #00000030;
+    transition: transform .1s ease-in-out;
+}
+
+.boton--oculto {
+    transform: scale(0);
 }
 
 .planes {
     grid-area: planes;
-    background: fixed url(/img/pattern.png);
+    background: url(/img/pattern.png);
     background-size: cover;
     box-shadow: var(--shadow-inset);
     padding: 2em 0;

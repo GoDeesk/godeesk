@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/main-desktop.css" media="(pointer: fine)">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <a href="#" class="logotipo">
             <img srcset="/img/logo-black-512w.png,
                          /img/logo-black-1024w.png 2x"
@@ -22,15 +22,15 @@
                  alt="GoDeesk"
                  class="logotipo--img">
         </a>
-        <a href="#" class="boton-menu">
-            <i class="fa fa-bars"></i>
+        <a href="#" class="boton boton--oculto" id="boton-contacto-hidden">
+            Contactanos
         </a>
     </header>
     <main class="presentacion">
         <h1 class="presentacion--titulo">
             Queremos verte <strong>crecer</strong>
         </h1>
-        <a href="#" class="boton">
+        <a href="#" class="boton" id="boton-contacto">
             Contactanos
         </a>
     </main>
@@ -119,5 +119,6 @@
             No se.
         </p>
     </section>
+    <script src="/js/main.js"></script>
 </body>
 </html>
