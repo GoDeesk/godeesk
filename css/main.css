@@ -81,7 +81,7 @@ body {
 
 .planes {
     grid-area: planes;
-    background: center/120% url(/img/pattern.png);
+    background: center/cover url(/img/pattern.png);
     box-shadow: var(--shadow-inset);
     padding: 2em 0;
     display: flex;
