@@ -55,7 +55,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#0005, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png"), top left/cover fixed url("https://www.kindpng.com/picc/m/9-99641_pensando-especialmente-en-las-personas-con-movilidad-persona.png");
+    background: linear-gradient(#0005, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png");
     /* TODO: Hacer que el fondo sea de varias resoluciones */
 }
 
