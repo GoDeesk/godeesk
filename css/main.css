@@ -184,6 +184,10 @@ body {
     box-shadow: var(--shadow-inset-small);
 }
 
+.footer img {
+    height: 100%;
+}
+
 .social a {
     color: var(--color-texto-claro);
     padding-left: .8em;
