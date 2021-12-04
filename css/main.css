@@ -75,6 +75,7 @@ body {
     font-weight: 700;
     box-shadow: 0 4px 4px 0 #00000030;
     transition: transform .1s ease-in-out;
+    transform-origin: 100% 50%;
 }
 
 .boton--oculto {
@@ -100,7 +101,7 @@ body {
     flex-shrink: 0;
     --border: .5px solid var(--color-texto-oscuro);
     border: var(--border);
-    border-radius: 0em;
+    border-radius: 15px;
     background: var(--color-fondo);
     overflow: hidden;
     display: flex;
@@ -163,6 +164,7 @@ body {
 
 .preguntas h3 {
     font-size: 1.6em;
+    margin: 1.5em 0 0 0;
 }
 
 .preguntas h3
