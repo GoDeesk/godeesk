@@ -3,7 +3,8 @@
     --color-2: #48355e;
     --color-3: #aa7cde;
     --color-4: #b483eb;
-    --color-5: #966ec4;
+    /*--color-5: #966ec4;*/
+    --color-5: #7953a6;
     --color-fondo: #fff;
     
     --color-texto-claro: #fff;
@@ -23,7 +24,7 @@ body {
     display: grid;
     grid-template:
         "header" 4em
-        "presentacion" 15em
+        "presentacion" minmax(240px, 30vh)
         "planes" auto
         "preguntas" auto
         "footer" auto
@@ -67,16 +68,20 @@ body {
 }
 
 .boton {
-    background: var(--color-3);
+    background: var(--color-1);
     text-decoration: none;
     padding: .85em;
     border-radius: 10px;
     color: var(--color-texto-claro);
     font-weight: 700;
     box-shadow: 0 4px 4px 0 #00000030;
-    transition: transform .1s ease-in-out;
+    transition: transform .1s ease-in-out, background-color .15s ease-in-out;
     transform-origin: 100% 50%;
 }
+
+.boton:hover { background: var(--color-5); }
+
+.boton:active { background: var(--color-2); }
 
 .boton--oculto {
     transform: scale(0);
@@ -112,7 +117,7 @@ body {
 }
 
 .plan--titulo {
-    background: var(--color-3);
+    background: var(--color-1);
     color: var(--color-texto-claro);
     text-align: center;
 }
@@ -162,19 +167,17 @@ body {
     padding: 0 2.5em;
 }
 
-.preguntas h3 {
+.preguntas h1 {
     font-size: 1.6em;
     margin: 1.5em 0 0 0;
 }
-
-.preguntas h3
 
 .preguntas p {
     font-size: 1.2em;
 }
 
 .footer {
-    background: var(--color-1);
+    background: var(--color-2);
     grid-area: footer;
     display: flex;
     justify-content: space-between;
@@ -184,12 +187,16 @@ body {
     box-shadow: var(--shadow-inset-small);
 }
 
-.footer img {
+.footer-logo {
     height: 100%;
+}
+
+.footer-bandera {
+    height: 80%;
 }
 
 .social a {
     color: var(--color-texto-claro);
-    padding-left: .8em;
+    padding: .8em .8em .8em .8em;
     text-decoration: none;
 }
