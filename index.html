@@ -7,17 +7,21 @@
     <title>GoDeesk</title>
 
     <script src="https://kit.fontawesome.com/60ed8093ad.js" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/main-desktop.css" media="(pointer: fine)">
+    <link rel="stylesheet" href="/css/main-desktop.css" media="(min-width: 900px)">
 </head>
 <body>
     <header class="header" id="header">
         <a href="#" class="logotipo">
-            <figure>
+            <figure class="logotipo--img">
                 <img srcset="/img/logo-black-512w.png,
                              /img/logo-black-1024w.png 2x"
                      src="/img/logo-block-1024w.png"
@@ -38,77 +42,85 @@
         </a>
     </main>
     <section class="planes">
-        <div class="plan">
-            <div class="plan--titulo">
-                <h1>Plan normi</h1>
+        <div class="planes-wrapper">
+            <div class="plan-wrapper">
+                <div class="plan">
+                    <div class="plan--titulo">
+                        <h1>Plan normi</h1>
+                    </div>
+                    <div class="plan--caracteristicas">
+                        <ul class="plan--caracteristicas--stylecard1"> 
+                            <li><i class="fa fa-check-circle"></i>Página Web</li>
+                            <li><i class="fa fa-check-circle"></i>Hola</li>
+                            <li><i class="fa fa-check-circle"></i>Si</li>
+                            <li><i class="fa fa-check-circle"></i>xD</li>
+                        </ul>
+                    </div>
+                    <div class="plan--precio">
+                        <p class="precio">
+                            <span class="precio--numero">$300</span>
+                            /mes
+                        </p>
+                        <p class="precio--aviso">
+                            $1200 inicial
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="plan--caracteristicas">
-                <ul class="plan--caracteristicas--stylecard1"> 
-                    <li><i class="fa fa-check-circle"></i>Página Web</li>
-                    <li><i class="fa fa-check-circle"></i>Hola</li>
-                    <li><i class="fa fa-check-circle"></i>Si</li>
-                    <li><i class="fa fa-check-circle"></i>xD</li>
-                </ul>
+            <div class="plan-wrapper">
+                <div class="plan">
+                    <div class="plan--titulo">
+                        <h1>Plan GoDeesk</h1>
+                    </div>
+                    <div class="plan--caracteristicas">
+                        <ul class="plan--caracteristicas--stylecard2">
+                            <li><i class="fa fa-check-circle"></i>Hola</li>
+                            <li><i class="fa fa-check-circle"></i>Como</li>
+                            <li><i class="fa fa-check-circle"></i>Te</li>
+                            <li><i class="fa fa-check-circle"></i>Va</li>
+                            <li><i class="fa fa-check-circle"></i>Lol</li>
+                            <li><i class="fa fa-check-circle"></i>Equis</li>
+                            <li><i class="fa fa-check-circle"></i>De</li>
+                        </ul>
+                    </div>
+                    <div class="plan--precio">
+                        <p class="precio">
+                            <span class="precio--numero">$600</span>
+                            /mes
+                        </p>
+                        <p class="precio--aviso">
+                            $1200 inicial
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="plan--precio">
-                <p class="precio">
-                    <span class="precio--numero">$300</span>
-                    /mes
-                </p>
-                <p class="precio--aviso">
-                    $1200 inicial
-                </p>
-            </div>
-        </div>
-        <div class="plan">
-            <div class="plan--titulo">
-                <h1>Plan GoDeesk</h1>
-            </div>
-            <div class="plan--caracteristicas">
-                <ul class="plan--caracteristicas--stylecard2">
-                    <li><i class="fa fa-check-circle"></i>Hola</li>
-                    <li><i class="fa fa-check-circle"></i>Como</li>
-                    <li><i class="fa fa-check-circle"></i>Te</li>
-                    <li><i class="fa fa-check-circle"></i>Va</li>
-                    <li><i class="fa fa-check-circle"></i>Lol</li>
-                    <li><i class="fa fa-check-circle"></i>Equis</li>
-                    <li><i class="fa fa-check-circle"></i>De</li>
-                </ul>
-            </div>
-            <div class="plan--precio">
-                <p class="precio">
-                    <span class="precio--numero">$600</span>
-                    /mes
-                </p>
-                <p class="precio--aviso">
-                    $1200 inicial
-                </p>
-            </div>
-        </div>
-        <div class="plan">
-            <div class="plan--titulo">
-                <h1>Plan Premium</h1>
-            </div>
-            <div class="plan--caracteristicas">
-                <ul class="plan--caracteristicas--stylecard3">
-                    <li><i class="fa fa-check-circle"></i>Hola</li>
-                    <li><i class="fa fa-check-circle"></i>Como</li>
-                    <li><i class="fa fa-check-circle"></i>Te</li>
-                    <li><i class="fa fa-check-circle"></i>Va</li>
-                    <li><i class="fa fa-check-circle"></i>Lol</li>
-                    <li><i class="fa fa-check-circle"></i>Equis</li>
-                    <li><i class="fa fa-check-circle"></i>De</li>
-                    
-                </ul>
-            </div>
-            <div class="plan--precio">
-                <p class="precio">
-                    <span class="precio--numero">$900</span>
-                    /mes
-                </p>
-                <p class="precio--aviso">
-                    $1200 inicial
-                </p>
+            <div class="plan-wrapper">
+                <div class="plan">
+                    <div class="plan--titulo">
+                        <h1>Plan Premium</h1>
+                    </div>
+                    <div class="plan--caracteristicas">
+                        <ul class="plan--caracteristicas--stylecard3">
+                            <li><i class="fa fa-check-circle"></i>Hola</li>
+                            <li><i class="fa fa-check-circle"></i>Como</li>
+                            <li><i class="fa fa-check-circle"></i>Te</li>
+                            <li><i class="fa fa-check-circle"></i>Va</li>
+                            <li><i class="fa fa-check-circle"></i>Lol</li>
+                            <li><i class="fa fa-check-circle"></i>Equis</li>
+                            <li><i class="fa fa-check-circle"></i>De</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="plan--precio">
+                        <p class="precio">
+                            <span class="precio--numero">$900</span>
+                            /mes
+                        </p>
+                        <p class="precio--aviso">
+                            $1200 inicial
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

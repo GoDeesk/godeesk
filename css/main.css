@@ -28,9 +28,8 @@ body {
         "planes" auto
         "preguntas" auto
         "footer" auto
-        / 1fr;
+        / 100%;
     font-family: 'Comfortaa', sans-serif;
-    overflow-x: hidden;
 }
 
 .header {
@@ -44,10 +43,12 @@ body {
     position: fixed;
     width: 100%;
     box-sizing: border-box;
+    z-index: 900;
 }
 
 .logotipo--img {
     height: 1.6em;
+    margin: 0;
 }
 
 .presentacion {
@@ -91,17 +92,69 @@ body {
     grid-area: planes;
     background: center/cover url(/img/pattern.png);
     box-shadow: var(--shadow-inset);
-    padding: 2em 0;
+}
+
+.tns-outer {
+    position: relative;
+}
+
+.tns-controls {
     display: flex;
-    overflow-x: scroll;
-    max-width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-.planes::-webkit-scrollbar {
-    display: none;
+.tns-controls > * {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    margin: 0 .5em;
+    z-index: 500;
+    border: none;
+    background: var(--color-5);
+    color: var(--color-texto-claro);
+    font-size: 1.5em;
 }
 
-/*después nos fijamos bien eso de que las cards sean ajustables el ancho al texto*/
+.tns-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tns-nav > * {
+    z-index: 500;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: none;
+    position: relative;
+}
+
+.tns-nav > *::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-5);
+    opacity: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+}
+
+.tns-nav-active::before {
+    opacity: 100%;
+}
+
 .plan {
     flex-shrink: 0;
     --border: .5px solid var(--color-texto-oscuro);
@@ -111,9 +164,10 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    margin: 0 1.3em;
+    margin: 35px auto;
     align-items: stretch;
-    width: min(14em, 80%);
+    height: 30em;
+    width: min(15em, 80vw);
 }
 
 .plan--titulo {

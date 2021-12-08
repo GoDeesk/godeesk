@@ -1,0 +1,13 @@
+body {
+    grid-template:
+        "header" 4em
+        "presentacion" minmax(600px, 60vh)
+        "planes" auto
+        "preguntas" auto
+        "footer" auto
+        / 100%;
+}
+
+.presentacion--titulo {
+    font-size: 3em;
+}
