@@ -28,7 +28,7 @@ body {
         "planes" auto
         "preguntas" auto
         "footer" auto
-        / 100%;
+        / 100vw;
     font-family: 'Comfortaa', sans-serif;
 }
 
@@ -235,18 +235,33 @@ body {
     grid-area: footer;
     display: flex;
     justify-content: space-between;
-    height: 3em;
-    padding: 1em 1.5em;
+    align-items: center;
+    padding: 0 1.5em;
     box-sizing: border-box;
     box-shadow: var(--shadow-inset-small);
 }
 
 .footer-logo {
+    height: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.footer-logo img {
     height: 100%;
 }
 
 .footer-bandera {
     height: 80%;
+    margin-left: .5em;
+}
+
+.social {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .social a {
