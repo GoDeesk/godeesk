@@ -166,7 +166,7 @@ body {
     flex-direction: column;
     margin: 35px auto;
     align-items: stretch;
-    height: 31em;
+    height: 32em;
     width: min(15em, 80vw);
 }
 
@@ -225,6 +225,10 @@ body {
 .plan--recomendacion {
     text-align: center;
     font-size: .85em;
+}
+
+.medianos-emprendimientos {
+    height: 100%;
 }
 
 .plan--titulo, .plan--caracteristicas {
