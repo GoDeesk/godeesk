@@ -166,14 +166,35 @@ body {
     flex-direction: column;
     margin: 35px auto;
     align-items: stretch;
-    height: 30em;
+    height: 31em;
     width: min(15em, 80vw);
 }
 
-.plan--titulo {
+.plan--precio {
     background: var(--color-1);
     color: var(--color-texto-claro);
     text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+    padding: .5em;
+}
+
+.plan--titulo {
+    text-align: center;
+}
+
+.plan--titulo h1 {
+    margin: .6em 0;
+}
+
+.precio--plan {
+    margin: 0;
+}
+
+.subtitulo {
+    font-size: .45em;
+    margin: 0;
+    font-weight: 100;
 }
 
 .plan--caracteristicas {
@@ -192,6 +213,7 @@ body {
 .plan--caracteristicas li {
     list-style: none;
     line-height: 2em;
+    font-size: .9em;
 }
 
 .plan--caracteristicas .fa-check-circle {
@@ -200,17 +222,14 @@ body {
     color: var(--color-2);
 }
 
+.plan--recomendacion {
+    text-align: center;
+    font-size: .85em;
+}
+
 .plan--titulo, .plan--caracteristicas {
     border-bottom: var(--border);
 }
-
-.precio { font-weight: 700; }
-
-.plan--precio { text-align: center; }
-
-.precio--numero { font-size: 2em; }
-
-.precio--aviso { color: var(--color-texto-secundario); }
 
 .preguntas {
     grid-area: preguntas;
