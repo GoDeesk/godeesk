@@ -166,7 +166,7 @@ body {
     flex-direction: column;
     margin: 35px auto;
     align-items: stretch;
-    height: 32em;
+    height: 33em;
     width: min(15em, 80vw);
 }
 
@@ -177,6 +177,12 @@ body {
     font-weight: 700;
     font-size: 2em;
     padding: .5em;
+}
+
+.recomendacion {
+    margin: .3em 0 0 0;
+    font-size: 1.1em;
+    color: var(--color-texto-secundario);
 }
 
 .plan--titulo {
@@ -227,12 +233,12 @@ body {
     font-size: .85em;
 }
 
-.medianos-emprendimientos {
-    height: 100%;
-}
-
 .plan--titulo, .plan--caracteristicas {
     border-bottom: var(--border);
+}
+
+.desc {
+    margin: .4em 0 .6em 0;
 }
 
 .preguntas {
