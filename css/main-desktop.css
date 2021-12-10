@@ -9,7 +9,7 @@ body {
 }
 
 .presentacion {
-    background: linear-gradient(90deg, #0008, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png");
+    background: linear-gradient(90deg, #0008, #0000), top left/cover no-repeat fixed url("/img/fondo2-600w.png");
 }
 
 .presentacion-wrapper {
