@@ -1,3 +1,7 @@
+/*
+ * Funcionalidad del botón de contactanos
+ */
+
 const header = document.getElementById('header');
 const boton = document.getElementById('boton-contacto');
 const botonHidden = document.getElementById('boton-contacto-hidden');
@@ -39,3 +43,29 @@ const slider = tns({
     },
     preventScrollOnTouch: 'auto'
 });
+
+/*
+ * Funcionalidad del modal de contactanos
+ */
+
+const contactoModal = document.getElementById("contacto-modal");
+const contactoCerrar = document.getElementById("contacto-cerrar");
+
+function abrirContacto(event) {
+    contactoModal.classList = "contacto-wrapper";
+    event.preventDefault();
+}
+
+function cerrarContacto() {
+    contactoModal.classList = "contacto-wrapper contacto-oculto";
+}
+
+contactoModal.addEventListener("click", function (event) {
+    if (event.target === contactoModal) {
+        cerrarContacto();
+    }
+});
+contactoCerrar.addEventListener("click", cerrarContacto);
+
+boton.addEventListener("click", abrirContacto);
+botonHidden.addEventListener("click", abrirContacto);
