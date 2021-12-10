@@ -3,8 +3,8 @@
     --color-2: #48355e;
     --color-3: #aa7cde;
     --color-4: #b483eb;
-    /*--color-5: #966ec4;*/
     --color-5: #7953a6;
+    --color-secundario: #e38f2c;
     --color-fondo: #fff;
     
     --color-texto-claro: #fff;
@@ -318,4 +318,93 @@ body {
     color: var(--color-texto-claro);
     padding: .8em .8em .8em .8em;
     text-decoration: none;
+}
+
+.contacto-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #0008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto {
+    background: var(--color-5);
+    color: var(--color-texto-claro);
+    width: min(400px, 90%);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transform: scale(1);
+    transition: all .1s ease-in-out;
+}
+
+.contacto-cerrar {
+    border: none;
+    background: none;
+    color: var(--color-texto-claro);
+    font-size: 1.3em;
+    border-radius: 50%;
+    transition: background .1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+    .contacto-cerrar:active {
+        background: #0005;
+    }
+
+.contacto-top {
+    background: var(--color-secundario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em .5em;
+    border-bottom: 1px solid var(--color-texto-claro);
+    position: relative;
+}
+
+.contacto-top h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.contacto-cerrar {
+    position: absolute;
+    top: 50%;
+    left: .5em;
+    transform: translateY(-50%);
+}
+
+.contacto-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.2em;
+    min-height: 5em;
+    padding: 1.8em;
+}
+
+.contacto-social:not(:last-child) {
+    margin-bottom: 2em;
+}
+
+.contacto-oculto {
+    /*display: none;*/
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.contacto-oculto .contacto {
+    transform: scale(0.1);
 }
