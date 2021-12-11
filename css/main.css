@@ -246,6 +246,7 @@ body {
 .plan--recomendacion {
     text-align: center;
     font-size: .85em;
+    min-height: 7em;
 }
 
 .plan--titulo, .plan--caracteristicas {
