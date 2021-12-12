@@ -78,11 +78,9 @@ const preguntaHeads = Array.from(document.getElementsByClassName("pregunta-head"
 
 preguntaHeads.forEach((preguntaHead) => {
     preguntaHead.addEventListener("click", (event) => {
-        const icon = event.target.parentElement.getElementsByClassName("fa")[0];
-        const body = event.target.parentElement.parentElement
+        const icon = event.currentTarget.getElementsByClassName("fa")[0];
+        const body = event.currentTarget.parentElement
             .getElementsByClassName("pregunta-body")[0];
-        console.log(body);
-        console.log(body.classList.contains("pregunta-body__mostrar"));
         if (body.classList.contains("pregunta-body__mostrar")) {
             body.classList.remove("pregunta-body__mostrar");
             icon.classList.remove("icon__open")
