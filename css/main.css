@@ -294,7 +294,7 @@ body {
 }
 
 .pregunta-body__mostrar {
-    max-height: 1000px;
+    max-height: 10000px;
     transition: max-height 1s ease-in-out;
 }
 
@@ -303,15 +303,19 @@ body {
 }
 
 .pregunta-head .fa {
-    transition: transform .1s ease-in-out;
+    transition: transform .1s;
 }
 
 .icon__open {
     transform: rotate(90deg);
 }
 
-.preguntas-body p {
+.pregunta-body {
     font-size: 1.2em;
+}
+
+.pregunta-body li {
+    padding-bottom: 1em;
 }
 
 .footer {
