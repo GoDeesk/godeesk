@@ -259,25 +259,58 @@ body {
 
 .preguntas {
     grid-area: preguntas;
-    text-align: center;
     box-shadow: var(--shadow-inset);
     background: var(--color-5);
     color: var(--color-texto-claro);
-    padding: 0 2.5em;
+    padding: 2.5em;
     display: flex;
     justify-content: center;
 }
 
 .preguntas-wrapper {
-    max-width: var(--max-width);
+    width: min(800px, 100%);
 }
 
-.preguntas h1 {
-    font-size: 1.6em;
-    margin: 1.5em 0 0 0;
+.pregunta {
+    border: 2px solid var(--color-texto-claro);
+    border-radius: 20px;
+    padding: 1em;
 }
 
-.preguntas p {
+.pregunta:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.pregunta-head {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.pregunta-body {
+    overflow: hidden;
+    transition: max-height .6s cubic-bezier(0, 1, 0, 1);
+    max-height: 0;
+}
+
+.pregunta-body__mostrar {
+    max-height: 1000px;
+    transition: max-height 1s ease-in-out;
+}
+
+.pregunta-head h1 {
+    margin: 0 0 0 1em;
+}
+
+.pregunta-head .fa {
+    transition: transform .1s ease-in-out;
+}
+
+.icon__open {
+    transform: rotate(90deg);
+}
+
+.preguntas-body p {
     font-size: 1.2em;
 }
 
@@ -400,7 +433,6 @@ body {
 }
 
 .contacto-oculto {
-    /*display: none;*/
     visibility: hidden;
     height: 0;
     width: 0;
