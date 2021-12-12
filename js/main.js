@@ -69,3 +69,26 @@ contactoCerrar.addEventListener("click", cerrarContacto);
 
 boton.addEventListener("click", abrirContacto);
 botonHidden.addEventListener("click", abrirContacto);
+
+/*
+ * Sección de preguntas frecuentes
+ */
+
+const preguntaHeads = Array.from(document.getElementsByClassName("pregunta-head"));
+
+preguntaHeads.forEach((preguntaHead) => {
+    preguntaHead.addEventListener("click", (event) => {
+        const icon = event.target.parentElement.getElementsByClassName("fa")[0];
+        const body = event.target.parentElement.parentElement
+            .getElementsByClassName("pregunta-body")[0];
+        console.log(body);
+        console.log(body.classList.contains("pregunta-body__mostrar"));
+        if (body.classList.contains("pregunta-body__mostrar")) {
+            body.classList.remove("pregunta-body__mostrar");
+            icon.classList.remove("icon__open")
+        } else {
+            body.classList.add("pregunta-body__mostrar");
+            icon.classList.add("icon__open")
+        }
+    });
+});
