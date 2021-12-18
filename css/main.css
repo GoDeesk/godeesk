@@ -18,6 +18,10 @@
     --max-width: 1200px;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .j-sb { justify-content: space-between; }
 
 body {
@@ -430,6 +434,11 @@ body {
     font-size: 1.2em;
     min-height: 5em;
     padding: 1.8em;
+}
+
+.contacto-social {
+    color: var(--color-texto-claro);
+    text-decoration: none;
 }
 
 .contacto-social:not(:last-child) {
