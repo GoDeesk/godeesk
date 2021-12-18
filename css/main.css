@@ -432,6 +432,11 @@ body {
     padding: 1.8em;
 }
 
+.contacto-social {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+}
+
 .contacto-social:not(:last-child) {
     margin-bottom: 2em;
 }
