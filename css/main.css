@@ -67,7 +67,7 @@ body {
     grid-area: presentacion;
     display: flex;
     justify-content: center;
-    background: linear-gradient(#0008, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.png");
+    background: linear-gradient(#0008, #0000), top left/cover no-repeat fixed url("/img/fondo1-600w.webp");
     padding: 0 2.5em;
     /* TODO: Hacer que el fondo sea de varias resoluciones */
 }
@@ -110,6 +110,7 @@ body {
 .planes {
     grid-area: planes;
     background: center/cover url(/img/pattern.png);
+    background: center/cover url(/img/pattern.webp);
     box-shadow: var(--shadow-inset);
 }
 

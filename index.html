@@ -28,13 +28,19 @@
     <header class="header" id="header">
         <div class="header-wrapper">
             <a href="#" class="logotipo">
-                <figure class="logotipo--img">
-                    <img srcset="/img/logo-black-512w.png,
+                <picture class="logotipo--img">
+                    <source type="image/webp"
+                            srcset="/img/logo-black-512w.webp,
+                                 /img/logo-black-1024w.webp 2x"
+                            alt="GoDeesk"
+                            class="logotipo--img">
+                    <source type="image/png"
+                            srcset="/img/logo-black-512w.png,
                                  /img/logo-black-1024w.png 2x"
-                         src="/img/logo-block-1024w.png"
-                         alt="GoDeesk"
-                         class="logotipo--img">
-                </figure>
+                            alt="GoDeesk"
+                            class="logotipo--img">
+                    <img src="/img/logo-black-512w.png" alt="GoDeesk" class="logotipo--img">
+                </picture>
             </a>
             <a href="#" class="boton boton--oculto" id="boton-contacto-hidden">
                 Contactanos
