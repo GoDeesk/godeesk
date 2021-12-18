@@ -18,6 +18,10 @@
     --max-width: 1200px;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .j-sb { justify-content: space-between; }
 
 body {
