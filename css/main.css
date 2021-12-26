@@ -12,6 +12,7 @@
     --color-texto-secundario: #666;
 
     --shadow: 0 25px 20px 0 #00000030;
+    --shadow-small: 0 5px 5px 0 #00000030;
     --shadow-inset: inset 0 25px 20px 0 #00000030;
     --shadow-inset-small: inset 0 5px 2.5px 0 #00000030;
 
@@ -192,15 +193,16 @@ body {
 }
 
 .liston {
-  background: #dfdf00;
-  color: var(--color-texto-oscuro);
-  position: absolute;
-  right: -1.5em;
-  top: 5.5em;
-  font-size: .8em;
-  padding: 0 3em;
-  transform: rotate(45deg);
-  transform-origin: right;
+    background: #dfdf00;
+    color: var(--color-texto-oscuro);
+    position: absolute;
+    right: -1.5em;
+    top: 5.5em;
+    font-size: .8em;
+    padding: 0 3em;
+    transform: rotate(45deg);
+    transform-origin: right;
+    box-shadow: var(--shadow-small);
 }
 
 .plan--precio {
