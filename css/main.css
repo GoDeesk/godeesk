@@ -188,6 +188,19 @@ body {
     align-items: stretch;
     height: 33em;
     width: min(15em, 80vw);
+    position: relative;
+}
+
+.liston {
+  background: #dfdf00;
+  color: var(--color-texto-oscuro);
+  position: absolute;
+  right: -1.5em;
+  top: 5.5em;
+  font-size: .8em;
+  padding: 0 3em;
+  transform: rotate(45deg);
+  transform-origin: right;
 }
 
 .plan--precio {
